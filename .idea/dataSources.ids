@@ -6,6 +6,7 @@
       <identifier-quote-string>`</identifier-quote-string>
     </database-info>
     <case-sensitivity plain-identifiers="mixed" quoted-identifiers="upper"/>
+    <schema name="" catalog="crawler"/>
     <schema name="" catalog="geo"/>
     <schema name="" catalog="hansya"/>
     <schema name="" catalog="hgdata"/>
@@ -14,6 +15,13 @@
     <schema name="" catalog="test"/>
     <schema name="" catalog="ucc"/>
     <schema name="" catalog="url_matcher"/>
+    <table name="tweets" schema="" catalog="crawler" type="TABLE">
+      <column name="ID" sqlType="MEDIUMINT UNSIGNED" length="8" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="TID" sqlType="VARCHAR" length="32" precision="0" nullable="true" jdbcType="12"/>
+      <column name="TWEET" sqlType="TEXT" length="65535" precision="0" nullable="true" jdbcType="-1"/>
+      <primary-key name="PRIMARY" columns="ID"/>
+      <index name="TID_IDX" unique="false" columns="TID"/>
+    </table>
     <table name="admin1codesascii" schema="" catalog="geo" type="TABLE">
       <column name="code" sqlType="VARCHAR" length="6" precision="0" nullable="false" jdbcType="12"/>
       <column name="name" sqlType="VARCHAR" length="56" precision="0" nullable="true" jdbcType="12"/>
