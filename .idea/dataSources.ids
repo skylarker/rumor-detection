@@ -19,8 +19,15 @@
       <column name="ID" sqlType="MEDIUMINT UNSIGNED" length="8" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
       <column name="TID" sqlType="VARCHAR" length="32" precision="0" nullable="true" jdbcType="12"/>
       <column name="TWEET" sqlType="TEXT" length="65535" precision="0" nullable="true" jdbcType="-1"/>
+      <column name="CREATED_AT" sqlType="VARCHAR" length="32" precision="0" nullable="true" jdbcType="12"/>
+      <column name="USER_NAME" sqlType="VARCHAR" length="128" precision="0" nullable="true" jdbcType="12"/>
+      <column name="USER_SCREEN_NAME" sqlType="VARCHAR" length="128" precision="0" nullable="true" jdbcType="12"/>
+      <column name="UID" sqlType="VARCHAR" length="32" precision="0" nullable="true" jdbcType="12"/>
+      <column name="USER_LOCATION" sqlType="VARCHAR" length="64" precision="0" nullable="true" jdbcType="12"/>
+      <column name="USER_TIME_ZONE" sqlType="VARCHAR" length="32" precision="0" nullable="true" jdbcType="12"/>
       <primary-key name="PRIMARY" columns="ID"/>
       <index name="TID_IDX" unique="false" columns="TID"/>
+      <index name="UID_IDX" unique="false" columns="UID"/>
     </table>
     <table name="admin1codesascii" schema="" catalog="geo" type="TABLE">
       <column name="code" sqlType="VARCHAR" length="6" precision="0" nullable="false" jdbcType="12"/>

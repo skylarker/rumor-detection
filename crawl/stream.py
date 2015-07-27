@@ -30,7 +30,6 @@ print start
 class TwitterStreamListener(StreamListener):
     def __init__(self):
         super(TwitterStreamListener, self).__init__()
-        self.count = 0
         self.tweet = None
         self.user = None
         self.mysql = MySQLConnector("root", "Enig2ma11", "127.0.0.1", 3306)
@@ -101,7 +100,7 @@ class TwitterStreamListener(StreamListener):
         query += """VALUES (%s, %s, %s, %s, %s, %s, %s, %s);"""
 
         self.processed += len(chunk)
-        print "Inserting tweet into `tweets` table [{0}/{1}]", self.processed, len(chunk)
+        print "Inserting tweet into `tweets` table %d %d" % (self.processed, len(chunk))
         self.exec_write_many.execute_write_many("hansya", self.db_conn, query, chunk)
 
     def on_status(self, status):
@@ -120,7 +119,7 @@ class TwitterStreamListener(StreamListener):
                 self.user.screen_name = status.author.screen_name.encode('utf-8')
                 self.user.id = status.author.id
                 self.user.name = status.author.name.encode('utf-8')
-                self.user.location = status.author.location
+                self.user.location = status.author.location.encode('utf-8')
                 self.user.time_zone = status.author.time_zone
                 self.tweet.user = self.user
 
@@ -129,10 +128,9 @@ class TwitterStreamListener(StreamListener):
                     pprint(vars(self.user))
                     pprint(vars(self.tweet))
                     """
-                    self.count += 1
                     self.chunk.append((self.tweet.id, self.tweet.text, self.tweet.created_at, self.user.name,
                                        self.user.screen_name, self.user.id, self.user.location, self.user.time_zone))
-                    if self.count % 100 == 0:
+                    if len(self.chunk) % 100 == 0:
                         self.insert_tweets(self.chunk)
                         self.chunk = []
 
@@ -141,6 +139,7 @@ class TwitterStreamListener(StreamListener):
                 print "I have been working for", time_pass, "seconds."
 
         except Exception, e:
+            print status
             print >> sys.stderr, 'Encountered Exception:', e
             pass
 
