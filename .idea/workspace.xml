@@ -2,23 +2,71 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="935553d6-d9fb-4830-9a0d-b3b569f85e9b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/rumor_detection.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/crawl/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/model/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/parse/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sql/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/twitter/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/twitter/auth/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utils/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/twitter/auth/authenicate.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/crawl/crawler.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/oauth.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mysql/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mysql/analyze/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mysql/cursors/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mysql/db/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mysql/exceptions/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mysql/executor/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mysql/select/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mysql/tables/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mysql/test/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mysql/utils/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/twitter/api/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mysql/test/connection_test.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mysql/tables/construct_replication_query.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mysql/tables/construct_schema.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mysql/analyze/correlate_cols.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mysql/db/create_db.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mysql/tables/create_indices.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mysql/tables/create_table.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mysql/utils/csv_to_mysql.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mysql/cursors/cursor.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mysql/db/delete_db.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mysql/tables/delete_table.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mysql/analyze/densify_table.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mysql/cursors/dict_cursor.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mysql/tables/drop_like_cols.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mysql/utils/error_handling.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mysql/executor/execute.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mysql/executor/execute_get_dict.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mysql/executor/execute_get_list.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mysql/executor/execute_get_list_one_col.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mysql/executor/execute_many.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mysql/executor/execute_write.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mysql/executor/execute_write_many.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/twitter/api/get_api.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mysql/tables/get_date_col.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mysql/tables/get_table_column_name_indices.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mysql/tables/get_table_column_name_types.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mysql/tables/get_table_column_names.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mysql/analyze/group_by.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mysql/tables/groupby.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mysql/tables/insert_records.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mysql/tables/is_exists.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mysql/db/mysql_dal.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mysql/analyze/order_by.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mysql/executor/quick_execute.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mysql/executor/quick_execute_get_list.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mysql/executor/quick_execute_get_list_one_col.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mysql/tables/quick_execute_write_many.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mysql/tables/random_subset_table.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mysql/tables/read_table_records.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mysql/test/read_table_records_test.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mysql/tables/replicate_table.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mysql/select/select_col.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mysql/select/select_cols.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mysql/db/sqldump.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mysql/cursors/ss_cursor.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mysql/tables/truncate_table.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/model/tweet.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/model/user.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mysql/utils/write_table_to_csv.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/sql/__init__.py" afterPath="$PROJECT_DIR$/crawl/stream.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/arunprasathshankar.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/arunprasathshankar.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/crawl/crawler.py" afterPath="$PROJECT_DIR$/crawl/crawler.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="rumor_detection.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -43,28 +91,7 @@
     <favorites_list name="rumor_detection" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="crawler.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/crawl/crawler.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="0" selection-start="14" selection-end="14" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="105">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="authenicate.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/twitter/auth/authenicate.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="12" selection-start="111" selection-end="111" vertical-scroll-proportion="0.19774011" vertical-offset="0" max-vertical-offset="531">
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -79,9 +106,37 @@
       <list>
         <option value="$PROJECT_DIR$/crawler.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/crawl/crawler.py" />
         <option value="$PROJECT_DIR$/oauth.json" />
         <option value="$PROJECT_DIR$/twitter/auth/authenicate.py" />
+        <option value="$PROJECT_DIR$/twitter/api/get_api.py" />
+        <option value="$PROJECT_DIR$/model/follower.py" />
+        <option value="$PROJECT_DIR$/model/user.py" />
+        <option value="$PROJECT_DIR$/crawl/crawler.py" />
+        <option value="$PROJECT_DIR$/model/tweet.py" />
+        <option value="$PROJECT_DIR$/crawl/stream.py" />
+        <option value="$PROJECT_DIR$/mysql/executor/execute.py" />
+        <option value="$PROJECT_DIR$/mysql/analyze/correlate_cols.py" />
+        <option value="$PROJECT_DIR$/mysql/analyze/densify_table.py" />
+        <option value="$PROJECT_DIR$/mysql/db/create_db.py" />
+        <option value="$PROJECT_DIR$/mysql/db/mysql_dal.py" />
+        <option value="$PROJECT_DIR$/mysql/executor/execute_get_dict.py" />
+        <option value="$PROJECT_DIR$/mysql/executor/execute_get_list.py" />
+        <option value="$PROJECT_DIR$/mysql/executor/execute_get_list_one_col.py" />
+        <option value="$PROJECT_DIR$/mysql/executor/execute_write.py" />
+        <option value="$PROJECT_DIR$/mysql/executor/execute_write_many.py" />
+        <option value="$PROJECT_DIR$/mysql/executor/quick_execute.py" />
+        <option value="$PROJECT_DIR$/mysql/executor/quick_execute_get_list_one_col.py" />
+        <option value="$PROJECT_DIR$/mysql/select/select_col.py" />
+        <option value="$PROJECT_DIR$/mysql/tables/construct_schema.py" />
+        <option value="$PROJECT_DIR$/mysql/tables/get_table_column_name_indices.py" />
+        <option value="$PROJECT_DIR$/mysql/tables/get_table_column_name_types.py" />
+        <option value="$PROJECT_DIR$/mysql/tables/get_table_column_names.py" />
+        <option value="$PROJECT_DIR$/mysql/tables/is_exists.py" />
+        <option value="$PROJECT_DIR$/mysql/tables/quick_execute_write_many.py" />
+        <option value="$PROJECT_DIR$/mysql/tables/random_subset_table.py" />
+        <option value="$PROJECT_DIR$/mysql/tables/replicate_table.py" />
+        <option value="$PROJECT_DIR$/mysql/utils/csv_to_mysql.py" />
+        <option value="$PROJECT_DIR$/mysql/utils/write_table_to_csv.py" />
       </list>
     </option>
   </component>
@@ -189,7 +244,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="sql" />
+              <option name="myItemId" value="twitter" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="api" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -251,6 +310,7 @@
     <property name="ignore_missing_gitignore" value="true" />
     <property name="LayoutCode.rearrangeEntriesPython" value="false" />
     <property name="recentsLimit" value="5" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -258,6 +318,9 @@
     </option>
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/sql" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/crawl" />
     </key>
@@ -432,6 +495,12 @@
       <option name="USE_PATTERN" value="false" />
       <method />
     </configuration>
+    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
+      <option name="VM_PARAMETERS" value="" />
+      <option name="USER_CFG_CLASS" />
+      <option name="CONTEXT_PROVIDER" />
+      <method />
+    </configuration>
     <list size="1">
       <item index="0" class="java.lang.String" itemvalue="Python.authenicate" />
     </list>
@@ -452,22 +521,22 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32932693" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20958512" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24964234" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32932693" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32932693" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -491,32 +560,426 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file:///Library/Python/2.7/site-packages/tweepy/streaming.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="0" selection-start="0" selection-end="734" vertical-scroll-proportion="1.0248448" vertical-offset="0" max-vertical-offset="915">
+        <state line="265" column="8" selection-start="9172" selection-end="9172" vertical-scroll-proportion="0.33333334" vertical-offset="3633" max-vertical-offset="4500">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/oauth.json">
+    <entry file="file://$PROJECT_DIR$/model/user.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="1" selection-start="278" selection-end="278" vertical-scroll-proportion="0.09603073" vertical-offset="0" max-vertical-offset="781">
+        <state line="8" column="29" selection-start="187" selection-end="187" vertical-scroll-proportion="0.2259887" vertical-offset="0" max-vertical-offset="531">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/crawl/crawler.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="14" selection-end="14" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="105">
+        <state line="12" column="0" selection-start="297" selection-end="297" vertical-scroll-proportion="0.33898306" vertical-offset="0" max-vertical-offset="531">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/twitter/auth/authenicate.py">
+    <entry file="file://$PROJECT_DIR$/model/tweet.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="12" selection-start="111" selection-end="111" vertical-scroll-proportion="0.19774011" vertical-offset="0" max-vertical-offset="531">
+        <state line="14" column="38" selection-start="737" selection-end="737" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawl/stream.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="36" selection-start="1617" selection-end="1617" vertical-scroll-proportion="0.0" vertical-offset="909" max-vertical-offset="1440">
           <folding>
-            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#0#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysql/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="531">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysql/analyze/correlate_cols.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="64" column="0" selection-start="2019" selection-end="2019" vertical-scroll-proportion="0.0" vertical-offset="245" max-vertical-offset="1050">
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+            <marker date="1437954864000" expanded="true" signature="-1:-1" placeholder="select missi..missing_value..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysql/analyze/densify_table.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="43" selection-start="270" selection-end="270" vertical-scroll-proportion="0.0" vertical-offset="927" max-vertical-offset="1710">
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+            <marker date="1437954864000" expanded="true" signature="-1:-1" placeholder="SELECT DISTI..." />
+            <marker date="1437954864000" expanded="true" signature="-1:-1" placeholder="SELECT DISTI..." />
+            <marker date="1437954864000" expanded="true" signature="-1:-1" placeholder="SELECT {row}..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysql/analyze/group_by.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="783">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysql/analyze/order_by.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="783">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysql/cursors/dict_cursor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="783">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysql/cursors/ss_cursor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="783">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysql/db/create_db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="20" selection-start="608" selection-end="608" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405">
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysql/db/delete_db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="783">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysql/db/mysql_dal.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="52" selection-start="52" selection-end="52" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1095">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysql/db/sqldump.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="783">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysql/executor/execute.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="23" selection-start="266" selection-end="266" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
+          <folding>
+            <element signature="e#0#52#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysql/executor/execute_get_dict.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="14" selection-start="113" selection-end="113" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysql/executor/execute_get_list.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="23" selection-start="192" selection-end="192" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="645">
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysql/executor/execute_get_list_one_col.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="5" selection-start="5" selection-end="5" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysql/executor/execute_many.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="783">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysql/executor/execute_write.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="27" selection-start="166" selection-end="166" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="705">
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysql/executor/execute_write_many.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="0" selection-start="138" selection-end="138" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="690">
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysql/executor/quick_execute.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="23" selection-start="142" selection-end="142" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysql/executor/quick_execute_get_list_one_col.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="5" selection-start="5" selection-end="5" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="783">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysql/select/select_col.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="31" selection-start="270" selection-end="270" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="285">
+          <folding>
+            <marker date="1437955068000" expanded="true" signature="-1:-1" placeholder="SELECT DISTI..missing_value..." />
+            <marker date="1437955068000" expanded="true" signature="-1:-1" placeholder="SELECT missi..missing_value..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysql/select/select_cols.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="761">
+          <folding>
+            <marker date="1429991295000" expanded="true" signature="-1:-1" placeholder="SELECT DISTI..table..." />
+            <marker date="1429991295000" expanded="true" signature="-1:-1" placeholder="SELECT cols ..table..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysql/tables/construct_replication_query.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="761">
+          <folding>
+            <marker date="1429991295000" expanded="true" signature="-1:-1" placeholder="CREATE TABLE..*..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysql/tables/construct_schema.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="20" selection-start="1229" selection-end="1229" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
+          <folding>
+            <marker date="1437955180000" expanded="true" signature="-1:-1" placeholder="CREATE TABLE..missing_value..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysql/tables/create_indices.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="761">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysql/tables/create_table.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="761">
+          <folding>
+            <marker date="1429991295000" expanded="true" signature="-1:-1" placeholder="DROP TABLE I..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysql/tables/delete_table.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="739">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysql/tables/drop_like_cols.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="825">
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+            <marker date="1429991295000" expanded="true" signature="-1:-1" placeholder="select conca..columns..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysql/tables/get_date_col.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="885">
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysql/tables/get_table_column_name_indices.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="5" selection-start="5" selection-end="5" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysql/tables/get_table_column_name_types.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="5" selection-start="64" selection-end="64" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
+          <folding>
+            <marker date="1437955180000" expanded="true" signature="-1:-1" placeholder="SELECT colum..columns..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysql/tables/get_table_column_names.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="5" selection-start="51" selection-end="51" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
+          <folding>
+            <marker date="1437955392000" expanded="true" signature="-1:-1" placeholder="SELECT colum..columns..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysql/tables/groupby.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="761">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysql/tables/insert_records.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="739">
+          <folding>
+            <marker date="1429991295000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysql/tables/is_exists.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="5" selection-start="5" selection-end="5" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysql/tables/quick_execute_write_many.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="5" selection-start="68" selection-end="68" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysql/tables/random_subset_table.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="5" selection-start="180" selection-end="180" vertical-scroll-proportion="0.056818184" vertical-offset="0" max-vertical-offset="1005">
+          <folding>
+            <marker date="1437955392000" expanded="true" signature="-1:-1" placeholder="DROP TABLE I..." />
+            <marker date="1437955392000" expanded="true" signature="-1:-1" placeholder="CREATE TABLE..missing_value..." />
+            <marker date="1437955392000" expanded="true" signature="-1:-1" placeholder="SELECT DISTI..missing_value..." />
+            <marker date="1437955392000" expanded="true" signature="-1:-1" placeholder="SELECT missi..missing_value..." />
+            <marker date="1437955392000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1437955392000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..missing_value..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysql/tables/replicate_table.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="0" selection-start="365" selection-end="365" vertical-scroll-proportion="0.24390244" vertical-offset="0" max-vertical-offset="738">
+          <folding>
+            <element signature="e#143#221#0" expanded="true" />
+            <marker date="1437955392000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1437955392000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..missing_value..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysql/tables/truncate_table.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="761">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysql/test/connection_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="761">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysql/test/read_table_records_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="761">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysql/utils/csv_to_mysql.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="76" column="0" selection-start="2746" selection-end="2746" vertical-scroll-proportion="0.8831169" vertical-offset="460" max-vertical-offset="1230">
+          <folding>
+            <element signature="e#153#163#0" expanded="true" />
+            <marker date="1437955392000" expanded="true" signature="-1:-1" placeholder="drop table i..." />
+            <marker date="1437955392000" expanded="true" signature="-1:-1" placeholder="create table..missing_value..." />
+            <marker date="1437955392000" expanded="true" signature="-1:-1" placeholder="create table..missing_value..." />
+            <marker date="1437955392000" expanded="true" signature="-1:-1" placeholder="alter table missing_value..." />
+            <marker date="1437955392000" expanded="true" signature="-1:-1" placeholder="alter table missing_value..." />
+            <marker date="1437955392000" expanded="true" signature="-1:-1" placeholder="alter table missing_value..." />
+            <marker date="1437955392000" expanded="true" signature="-1:-1" placeholder="alter table missing_value..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysql/utils/write_table_to_csv.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="739">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysql/cursors/cursor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="531">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysql/utils/error_handling.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="761">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysql/tables/read_table_records.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="761">
+          <folding>
+            <marker date="1429991295000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..missing_value..." />
           </folding>
         </state>
       </provider>
