@@ -58,8 +58,10 @@ class TwitterStreamListener(StreamListener):
     def create_tweets_table(self):
         # construct scheme for `raw_data` table
         table_name = '`tweets`'
-        cols = ['`TID`', '`TWEET`']
-        types = ['VARCHAR(32)', 'TEXT']
+        cols = ['`TID`', '`TWEET`', '`CREATED_AT`', '`USER_NAME`', '`USER_SCREEN_NAME`', '`UID`', '`USER_LOCATION`',
+                '`USER_TIME_ZONE`']
+        types = ['VARCHAR(32)', 'TEXT', 'VARCHAR(32)', 'VARCHAR(128)', 'VARCHAR(128)', 'VARCHAR(32)', 'VARCHAR(64)',
+                 'VARCHAR(32)']
         schema = self.schema.construct_schema(table_name, cols, types)
         # create table raw_data
         self.create_table.create_table(table_name, schema, self.cursor)
@@ -91,11 +93,12 @@ class TwitterStreamListener(StreamListener):
     def insert_tweets(self, chunk):
         print "Inserting records into `tweets` table"
         table_name = '`tweets`'
-        cols = ['`TID`', '`TWEET`']
+        cols = ['`TID`', '`TWEET`', '`CREATED_AT`', '`USER_NAME`', '`USER_SCREEN_NAME`', '`UID`', '`USER_LOCATION`',
+                '`USER_TIME_ZONE`']
         query = """INSERT INTO %s (""" % table_name
         cols = ', '.join(cols)
         query += cols + ') '
-        query += """VALUES (%s, %s);"""
+        query += """VALUES (%s, %s, %s, %s, %s, %s, %s, %s);"""
 
         self.processed += len(chunk)
         print "Inserting tweet into `tweets` table [{0}/{1}]", self.processed, len(chunk)
@@ -127,7 +130,8 @@ class TwitterStreamListener(StreamListener):
                     pprint(vars(self.tweet))
                     """
                     self.count += 1
-                    self.chunk.append((self.tweet.id, self.tweet.text))
+                    self.chunk.append((self.tweet.id, self.tweet.text, self.tweet.created_at, self.user.name,
+                                       self.user.screen_name, self.user.id, self.user.location, self.user.time_zone))
                     if self.count % 100 == 0:
                         self.insert_tweets(self.chunk)
                         self.chunk = []
