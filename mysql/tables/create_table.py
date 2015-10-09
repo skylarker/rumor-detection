@@ -5,6 +5,6 @@ class CreateTable(object):
     @staticmethod
     def create_table(table_name, schema, cursor):
         print schema
-        query = """DROP TABLE IF EXISTS %s;""" % table_name
-        cursor.execute(query)
+        # query = """DROP TABLE IF EXISTS %s;""" % table_name
+        # cursor.execute(query)
         cursor.execute(schema)

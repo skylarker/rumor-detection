@@ -24,6 +24,7 @@ from mysql.cursors.cursor import Cursor
 
 start = clock()
 print start
+print time.strftime("%Y-%m-%d %H:%M")
 
 
 class TwitterStreamListener(StreamListener):
@@ -52,8 +53,19 @@ class TwitterStreamListener(StreamListener):
 
         self.chunk = []
         self.processed = 0
-        self.candidates = ['gun ', 'gun control', 'Gun ', 'Gun Control', 'GunControl', '#GunControl',
-                           'second amendment']
+        self.candidates = list()
+        self.load_filter_candidates()
+
+    def load_filter_candidates(self):
+        with open('/home/ubuntu/rumor_detection/data/filter', 'r+') as candidates:
+            for candidate in candidates:
+                self.candidates.append(candidate.strip() + ' ')
+        with open('/home/ubuntu/rumor_detection/data/hashtags', 'r+') as candidates:
+            for candidate in candidates:
+                self.candidates.append(candidate.strip())
+        with open('/home/ubuntu/rumor_detection/data/flat', 'r+') as candidates:
+            for candidate in candidates:
+                self.candidates.append(' ' + candidate.strip() + ' ')
 
     def create_tweets_table(self):
         # construct scheme for `raw_data` table
@@ -64,7 +76,6 @@ class TwitterStreamListener(StreamListener):
                  'VARCHAR(32)']
         schema = self.schema.construct_schema(table_name, cols, types)
         # create table raw_data
-        # TODO create only if it doesn't exist
         self.create_table.create_table(table_name, schema, self.cursor)
 
     def setup_mysql(self):
@@ -87,15 +98,12 @@ class TwitterStreamListener(StreamListener):
         except MySQLdb.Error, e:
             print "Failed to establish connection to  database: ", e
         self.cursor = self.get_cursor.cursor(self.db_conn)
-        self.cursor.execute('SET NAMES utf8;')
-        self.cursor.execute('SET CHARACTER SET utf8;')
-        self.cursor.execute('SET character_set_connection=utf8;')
         # get a dict cursor
         self.dict_cursor = self.get_dict_cursor.dict_cursor(self.db_conn)
         self.create_tweets_table()
 
     def insert_tweets(self, chunk):
-        print "Inserting records into `tweets` table"
+        # print "Inserting records into `tweets` table"
         table_name = '`tweets`'
         cols = ['`TID`', '`TWEET`', '`CREATED_AT`', '`USER_NAME`', '`USER_SCREEN_NAME`', '`UID`', '`USER_LOCATION`',
                 '`USER_TIME_ZONE`']
@@ -105,7 +113,7 @@ class TwitterStreamListener(StreamListener):
         query += """VALUES (%s, %s, %s, %s, %s, %s, %s, %s);"""
 
         self.processed += len(chunk)
-        print "Inserting tweet into `tweets` table %d %d" % (self.processed, len(chunk))
+        print "Inserting chunk into `tweets` table %d %d" % (self.processed, len(chunk))
         self.exec_write_many.execute_write_many("hansya", self.db_conn, query, chunk)
 
     def on_status(self, status):
@@ -116,29 +124,28 @@ class TwitterStreamListener(StreamListener):
 
                 self.user = User()
                 # print status.text
-                # self.tweet.text = status.text.encode('utf-8').replace('\n', '\\n'
-                # )
-                self.tweet.text = status.text
+                self.tweet.text = status.text.encode('unicode_escape').replace('\n', '\\n')
+                # self.tweet.text = status.text
 
                 for candidate in self.candidates:
                     if candidate in self.tweet.text:
-                        print self.tweet.text
+                        # print self.tweet.text
                         self.tweet.id = status.id
                         self.tweet.created_at = status.created_at
                         self.tweet.source = status.source
                         # self.tweet.possibly_sensitive = status.possibly_sensitive
                         self.tweet.place = status.place
                         if status.author.screen_name:
-                            self.user.screen_name = status.author.screen_name.encode('utf-8')
+                            self.user.screen_name = status.author.screen_name.encode('unicode_escape')
                         self.user.id = status.author.id
                         if status.author.name:
-                            self.user.name = status.author.name.encode('utf-8')
+                            self.user.name = status.author.name.encode('unicode_escape')
                         if status.author.location:
-                            self.user.location = status.author.location.encode('utf-8')
+                            self.user.location = status.author.location.encode('unicode_escape')
                         self.user.time_zone = status.author.time_zone
                         self.tweet.user = self.user
 
-                        if self.tweet.text and not ('RT @' in self.tweet.text):  # Exclude re-tweets
+                        if self.tweet.text:  # Exclude re-tweets
                             """
                             pprint(vars(self.user))
                             pprint(vars(self.tweet))
@@ -146,7 +153,7 @@ class TwitterStreamListener(StreamListener):
                             self.chunk.append((self.tweet.id, self.tweet.text, self.tweet.created_at, self.user.name,
                                                self.user.screen_name, self.user.id, self.user.location,
                                                self.user.time_zone))
-                            if len(self.chunk) % 100 == 0:
+                            if len(self.chunk) % 5 == 0:
                                 self.insert_tweets(self.chunk)
                                 self.chunk = []
 
