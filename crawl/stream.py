@@ -22,7 +22,6 @@ from twitter.auth.authenicate import OAuthenicate
 from mysql.db.mysql_dal import MySQLConnector
 from mysql.cursors.cursor import Cursor
 
-
 start = clock()
 print start
 
@@ -32,7 +31,7 @@ class TwitterStreamListener(StreamListener):
         super(TwitterStreamListener, self).__init__()
         self.tweet = None
         self.user = None
-        self.mysql = MySQLConnector("root", "Enig2ma11", "127.0.0.1", 3306)
+        self.mysql = MySQLConnector("root", "hansya", "127.0.0.1", 3306)
         self.schema = ConstructSchema()
         self.create_db = CreateDB()
         self.get_cursor = Cursor()
@@ -53,6 +52,8 @@ class TwitterStreamListener(StreamListener):
 
         self.chunk = []
         self.processed = 0
+        self.candidates = ['gun ', 'gun control', 'Gun ', 'Gun Control', 'GunControl', '#GunControl',
+                           'second amendment']
 
     def create_tweets_table(self):
         # construct scheme for `raw_data` table
@@ -63,6 +64,7 @@ class TwitterStreamListener(StreamListener):
                  'VARCHAR(32)']
         schema = self.schema.construct_schema(table_name, cols, types)
         # create table raw_data
+        # TODO create only if it doesn't exist
         self.create_table.create_table(table_name, schema, self.cursor)
 
     def setup_mysql(self):
@@ -81,10 +83,13 @@ class TwitterStreamListener(StreamListener):
 
         try:
             self.db_conn = self.mysql.db_connect(self.db_name)
+            self.db_conn.set_character_set('utf8')
         except MySQLdb.Error, e:
             print "Failed to establish connection to  database: ", e
         self.cursor = self.get_cursor.cursor(self.db_conn)
-
+        self.cursor.execute('SET NAMES utf8;')
+        self.cursor.execute('SET CHARACTER SET utf8;')
+        self.cursor.execute('SET character_set_connection=utf8;')
         # get a dict cursor
         self.dict_cursor = self.get_dict_cursor.dict_cursor(self.db_conn)
         self.create_tweets_table()
@@ -104,35 +109,46 @@ class TwitterStreamListener(StreamListener):
         self.exec_write_many.execute_write_many("hansya", self.db_conn, query, chunk)
 
     def on_status(self, status):
+        # print status.__dict__
         try:
             if status.lang == 'en':  # collect only English tweets
                 self.tweet = Tweet()
+
                 self.user = User()
+                # print status.text
+                # self.tweet.text = status.text.encode('utf-8').replace('\n', '\\n'
+                # )
+                self.tweet.text = status.text
 
-                self.tweet.text = status.text.encode('utf-8').replace('\n', '\\n')
-                self.tweet.id = status.id
-                self.tweet.created_at = status.created_at
-                self.tweet.source = status.source
-                self.tweet.possibly_sensitive = status.possibly_sensitive
-                self.tweet.place = status.place
+                for candidate in self.candidates:
+                    if candidate in self.tweet.text:
+                        print self.tweet.text
+                        self.tweet.id = status.id
+                        self.tweet.created_at = status.created_at
+                        self.tweet.source = status.source
+                        # self.tweet.possibly_sensitive = status.possibly_sensitive
+                        self.tweet.place = status.place
+                        if status.author.screen_name:
+                            self.user.screen_name = status.author.screen_name.encode('utf-8')
+                        self.user.id = status.author.id
+                        if status.author.name:
+                            self.user.name = status.author.name.encode('utf-8')
+                        if status.author.location:
+                            self.user.location = status.author.location.encode('utf-8')
+                        self.user.time_zone = status.author.time_zone
+                        self.tweet.user = self.user
 
-                self.user.screen_name = status.author.screen_name.encode('utf-8')
-                self.user.id = status.author.id
-                self.user.name = status.author.name.encode('utf-8')
-                self.user.location = status.author.location.encode('utf-8')
-                self.user.time_zone = status.author.time_zone
-                self.tweet.user = self.user
-
-                if not ('RT @' in self.tweet.text):  # Exclude re-tweets
-                    """
-                    pprint(vars(self.user))
-                    pprint(vars(self.tweet))
-                    """
-                    self.chunk.append((self.tweet.id, self.tweet.text, self.tweet.created_at, self.user.name,
-                                       self.user.screen_name, self.user.id, self.user.location, self.user.time_zone))
-                    if len(self.chunk) % 100 == 0:
-                        self.insert_tweets(self.chunk)
-                        self.chunk = []
+                        if self.tweet.text and not ('RT @' in self.tweet.text):  # Exclude re-tweets
+                            """
+                            pprint(vars(self.user))
+                            pprint(vars(self.tweet))
+                            """
+                            self.chunk.append((self.tweet.id, self.tweet.text, self.tweet.created_at, self.user.name,
+                                               self.user.screen_name, self.user.id, self.user.location,
+                                               self.user.time_zone))
+                            if len(self.chunk) % 100 == 0:
+                                self.insert_tweets(self.chunk)
+                                self.chunk = []
 
             time_pass = clock() - start
             if time_pass % 60 == 0:
@@ -152,7 +168,7 @@ class TwitterStreamListener(StreamListener):
         Called when a delete notice arrives for a status
 
         """
-        #print "Delete notice for %s. %s" % (status_id, user_id)
+        # print "Delete notice for %s. %s" % (status_id, user_id)
         return
 
     def on_limit(self, track):
@@ -169,10 +185,17 @@ class TwitterStreamListener(StreamListener):
         return True
 
 
-auth = OAuthenicate().authenticate()
-streamTube = Stream(auth=auth, listener=TwitterStreamListener(),
-                    timeout=300)
-streamTube.sample()
+while True:
+    # Now handling
+    # socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+    try:
+        auth = OAuthenicate().authenticate()
+        streamTube = Stream(auth=auth, listener=TwitterStreamListener(),
+                            timeout=300)
+        streamTube.sample()
 
-timePass = time.clock() - start
-print timePass
+        timePass = time.clock() - start
+        print timePass
+    except Exception as e:
+        print >> sys.stderr, 'Inconsistent internet connection: ', e
+        pass
